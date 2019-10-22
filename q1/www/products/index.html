@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hertz Donuts</title>
+  <link rel="shortcut icon" type="image/png" href="../img/favicon.ico" />
+  <link href="../css/StyleSheet.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="http://wlu-cp202.appspot.com/CP202/Fall2019/shopping_cart_v1/cart.js" async></script>
+
+  <!-- YOU MUST MODIFY THIS VALUE TO POINT TO YOUR ACTUAL CHECKOUT PAGE -->
+  <script>
+    localStorage.checkoutURL = '../checkout.html';
+  </script>
+
+</head>
+
+<body class="body body1">
+  <h1>Hertz Donuts</h1>
+  <br>
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a class="active" href="index.html">Products</a></li>
+    <li><a href="../checkout.html">Checkout</a></li>
+
+  </ul>
+  <div class="row">
+    <div class="column">
+      <h2>Pink Frosted Sprinkled Donut</h2>
+      <button class="button button1" onclick="window.location.href = 'pink_donut.html';"> More Information</button>
+      <img class="img img1" src="img/pink_frosted_sprinkled_donut.jpg" alt="Pink Frosted Sprinkled Donut">
+      <button class="button button1" onclick="clientAddItemToCart({prodName: 'Pink Frosted Sprinkled Donut', prodDesc: 'Great donut', prodPrice: '5.00', prodQty: '1'})";>Buy Now!</button>
+    </div>
+    <div class="column">
+      <h2>Chocolate Frosted Sprinkled Donut</h2>
+      <button class="button button1" onclick="window.location.href = 'chocolate_donut.html';"> More Information</button>
+      <img class="img img3" src="img/chocolate_frosted_sprinkled_donut.jpg" alt="chocolate frosted sprinkled donut">
+      <button class="button button1" onclick="clientAddItemToCart({prodName: 'Chocolate Frosted Sprinkled Donut', prodDesc: 'Great donut', prodPrice: '7.50', prodQty: '1'})";>Buy Now!</button>
+    </div>
+
+</body>
+
+</html>
