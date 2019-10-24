@@ -31,9 +31,24 @@
   <h2>Checkout</h2>
   <br>
   <div class="div div2">
+    <h2>Your Shopping Cart</h2>
 
+    <div id="cp202-cart" ; class="div div2"></div>
+    <form action="http://cp202-server.appspot.com/order" method="post">
+      <p class="p p1">First name:</p>
+      <input class="input input1" type="text" name="firstname" value="Ben">
+      <br>
+      <br>
+      <p class="p p1">Last Name:</p>
+      <input class="input input1" type="text" name="lastname" value="Henley">
+      <br>
+      <br>
+      <br><br>
+      <input class="input input2"type="submit" value="Complete Order">
+      <input type="hidden" name="order_json" id="order_json" value="">
+      <input type="hidden" name="student_id" id="student_id" value="160910560">
+    </form>
 
-  <div id="cp202-cart"></div>
   </div>
 </body>
 
