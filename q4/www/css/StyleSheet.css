@@ -1,20 +1,83 @@
-/* if desktop */
-    .mobile_device_380px {
-        display: none;
-    }
-    .mobile_device_480px {
-        display: none;
-    }
+
+h1{
+  font-family: verdana;
+  font-size: 28px;
+}
+h2{
+  font-family: verdana;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img1{
+  width: 150px;
+  height: 150px;
+}
+.img2{
+  width: 293px;
+  height: 293px;
+}
+
+.divlogo{
+  width:30%;
+  float: left;
+  padding: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.divtitle{
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 300px;
+  padding: 4px;
+
+}
+
+.row{
+  width: 935px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .column {
+    width: 300px;
+  }
+  .row{
+    width: 625px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 
-    /* if mobile device max width 380px */
-    @media only screen and (max-device-width: 380px) {
-        .mobile_device_380px{display: block;}
-        .desktop {display: none;}
-    }
+@media only screen and (max-width: 500px) {
+.row{
+  width:320px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2{
+  display: none;
+}
 
-    /* if mobile device max width 480px */
-    @media only screen and (max-device-width: 480px) {
-       .mobile_device_480px{display: block;}
-       .desktop {display: none;}
-    }
+}

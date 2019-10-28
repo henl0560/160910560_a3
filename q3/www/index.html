@@ -4,14 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>FakeChimp's Registration Form</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href="css/StyleSheet.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
   <link href='http://fonts.googleapis.com/css?family=Proza+Libre' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <script type="text/javascript" src="js/validation.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
 
 </head>
 
@@ -26,32 +31,41 @@
       <h3>Find your people. Engage your customers. Build your brand. Do it all with FakeChimp’s Marketing Platform. </h2>
         <form action="http://cp202-server.appspot.com/register" method="post">
           <h3>Email</h3>
-          <input class="input input1" type="text" name="email" value="." id="myEmail">
+          <input class="input input1" type="email" name="lastname" value="">
           <br>
           <h3>Username</h3>
-          <input class="input input1" type="text" name="usernmae" value="." id="myUser">
+          <input class="input input1" type="text" name="lastname" value="">
           <br>
-          <div class="divpasseye">
-            <div class="divpass">
-              <h3>Password</h3>
-            </div>
-            <div class="diveye">
-              <button class="btn" onclick="myFunction()" onclick="changeeye" id="eye"><i class="fa fa-eye"></i></button>
-            </div>
-          </div>
-
+          <h3>Password</h3>
           <input class="input input1" type="password" value="" id="myInput">
-          <input type="checkbox" onclick="myFunction()">
-          <br>
-
+          <input type="checkbox" onclick="myFunction()">Show Password
           <br>
           <div class="column">
-            <input class="input input2" type="submit" disabled value="Get Started!" id="startButn">
+            <ul>
+              <li class="p1">One lowercase character</li>
+              <li class="p1">One uppercase character</li>
+              <li class="p1">One number</li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li class="p1">One special character</li>
+              <li class="p1">8 characters minimum</li>
+            </ul>
+            <br>
+            <br>
+          </div>
+          <div class="column">
+          </div>
+          <br>
+          <div class="column">
+            <input class="input input2" type="submit" value="Get Started!">
           </div>
           <div class="column">
             <p class="p1">By clicking the “Get Started!” button, you are creating a FakeChimp account. </p>
 
           </div>
+
         </form>
         <footer>
           <p>©2019 All Rights Reserved. FakeChimp® is a registered trademark of WLUCP202 Class. </p>
