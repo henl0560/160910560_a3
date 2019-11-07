@@ -1,6 +1,5 @@
 body {
   background-color: white;
-  width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -8,12 +7,15 @@ body {
    font-size: 14px;
    color: #241c15;
 }
-img{
+.img1{
   display: block;
-  width=120px;
+  width:120px;
   margin-left: auto;
   margin-right: auto;
   float: none;
+}
+.img2{
+  display: none;
 }
 h1{
   padding-left: 5px;
@@ -35,6 +37,9 @@ h3{
   padding: 10px;
   margin-left: 5px;
   margin-right: 5px;
+  padding-right: 5px;
+  font-family: 'Proza Libre', "Helvetica Neue", 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
+
 
 }
 .input2{
@@ -46,6 +51,22 @@ h3{
   color: white;
   font-weight: bold;
   font-size: 14px;
+  font-family: 'Proza Libre', "Helvetica Neue", 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
+
+}
+.input2:disabled{
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: lightgrey;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Proza Libre', "Helvetica Neue", 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
+
+
+}
 
 }
 .input3{
@@ -54,15 +75,23 @@ h3{
   padding: 10px;
   margin-left: 5px;
   margin-right: 5px;
-
 }
-p{
-  margin-left: 10%;
-  margin-right: 10%;
+
+.input4{
+  background-color: #007c89;
+}
+.p2{
+  color: #007c89;
+  margin: none;
+  padding: none;
+  border: none;
 }
 .p1{
   font size: 12px;
   color: #241c15;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
 }
 ul {
   list-style: none;
@@ -76,12 +105,29 @@ ul li::before {
   width: 1em;
   margin-left: -1em;
 }
+.divpasseye{
+  width: 100%;
+}
+.divpass{
+  width: 50%;
+  text-align: left;
+  float: left;
+}
+.diveye{
+  width: 50%;
+  float: left;
+  text-align: right;
+  margin-top: 5%;
+}
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
   width: 50%;
 }
 
+.row {
+  width: 70%;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -95,20 +141,44 @@ footer{
   font size: 11px;
   color: rgba(36,28,21,0.65);
 }
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+.btn {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container{
+  padding-top:50px;
+  margin: auto;
+}
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+  .row{
     width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
   }
   .column {
-    width: 100%;
+    width: 90%;
+    padding-right: 10px;
   }
-  h1{
-    padding-left: 5px;
-    text-align: center;
+  .img2{
+    display: block;
+    width:120px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+  .img1{
+    display: none;
   }
 }

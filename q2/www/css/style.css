@@ -7,12 +7,15 @@ body {
    font-size: 14px;
    color: #241c15;
 }
-img{
+.img1{
   display: block;
-  width=120px;
+  width:120px;
   margin-left: auto;
   margin-right: auto;
   float: none;
+}
+.img2{
+  display: none;
 }
 h1{
   padding-left: 5px;
@@ -167,5 +170,15 @@ footer{
   .column {
     width: 90%;
     padding-right: 10px;
+  }
+  .img2{
+    display: block;
+    width:120px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+  .img1{
+    display: none;
   }
 }

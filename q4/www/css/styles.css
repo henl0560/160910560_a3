@@ -12,6 +12,9 @@ h2{
 .img1{
   width: 150px;
   height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .img2{
   width: 293px;
@@ -19,15 +22,17 @@ h2{
 }
 
 .divlogo{
+  display: block;
   width:30%;
   float: left;
   padding: 20px;
+  padding-left: 30px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 .divtitle{
-  width: 100%;
+  width: 90%;
   padding: 20px;
   margin-bottom: 40px;
 

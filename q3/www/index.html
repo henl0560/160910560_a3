@@ -4,67 +4,56 @@
 <head>
   <meta charset="utf-8">
   <title>FakeChimp's Registration Form</title>
-  <link href="css/StyleSheet.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
   <link href='http://fonts.googleapis.com/css?family=Proza+Libre' rel='stylesheet'>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myInput");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" src="js/validation.js"></script>
 
 </head>
 
 <body>
   <div class="row">
     <div class="column">
-      <img src="img/logo-color.png" alt="Fake Chimp Logo Color" width=120px;>
+      <img class="img1" src="img/logo-color.png" alt="Fake Chimp Logo Color">
+      <img class="img2" src="img/logo-black-white.png" alt="Fake chimp logo black and white">
     </div>
     <div class="column">
       <h1>Get Started with your account</h1>
 
       <h3>Find your people. Engage your customers. Build your brand. Do it all with FakeChimp’s Marketing Platform. </h2>
-        <form action="http://cp202-server.appspot.com/register" method="post">
+        <form action="http://cp202-server.appspot.com/register_with_image" method="post" enctype="multipart/form-data" onsubmit="validateForm()">
           <h3>Email</h3>
-          <input class="input input1" type="email" name="lastname" value="">
+          <input class="input input1" type="text" name="email" value="" id="myEmail">
           <br>
-          <h3>Username</h3>
-          <input class="input input1" type="text" name="lastname" value="">
-          <br>
-          <h3>Password</h3>
-          <input class="input input1" type="password" value="" id="myInput">
-          <input type="checkbox" onclick="myFunction()">Show Password
-          <br>
-          <div class="column">
-            <ul>
-              <li class="p1">One lowercase character</li>
-              <li class="p1">One uppercase character</li>
-              <li class="p1">One number</li>
-            </ul>
+          <h3>Country</h3>
+          <select name="country">
+            <option value="Canada">Canada</option>
+            <option value="United States">United States</option>
+          </select>
+          <div class="divpasseye">
+            <div class="divpass">
+              <h3>Description</h3>
+            </div>
           </div>
-          <div class="column">
-            <ul>
-              <li class="p1">One special character</li>
-              <li class="p1">8 characters minimum</li>
-            </ul>
-            <br>
-            <br>
-          </div>
-          <div class="column">
-          </div>
+          <textarea name="description" rows="5" cols="62"> This is a text area</textarea>
+          <br>
+          <h3>Upload Image</h3>
+          <input type="file" name="avatarImage" accept="image/*">
+          <br>
+
           <br>
           <div class="column">
-            <input class="input input2" type="submit" value="Get Started!">
+            <input class="input input2" type="submit" value="Get Started!" id="startButn">
           </div>
           <div class="column">
             <p class="p1">By clicking the “Get Started!” button, you are creating a FakeChimp account. </p>
 
           </div>
+          <input type="hidden" name="student_id" id="student_id" value="160910560">
 
         </form>
         <footer>

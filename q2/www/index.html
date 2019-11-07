@@ -6,7 +6,7 @@
   <title>FakeChimp's Registration Form</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="css/StyleSheet.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
   <link href='http://fonts.googleapis.com/css?family=Proza+Libre' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,39 +18,36 @@
 <body>
   <div class="row">
     <div class="column">
-      <img src="img/logo-color.png" alt="Fake Chimp Logo Color" width=120px;>
+      <img class="img1" src="img/logo-color.png" alt="Fake Chimp Logo Color">
+      <img class="img2" src="img/logo-black-white.png" alt="Fake chimp logo black and white">
     </div>
     <div class="column">
       <h1>Get Started with your account</h1>
-
       <h3>Find your people. Engage your customers. Build your brand. Do it all with FakeChimp’s Marketing Platform. </h2>
-        <form action="http://cp202-server.appspot.com/register" method="post">
+        <form action="http://cp202-server.appspot.com/register" method="post" enctype="multipart/form-data" onsubmit="return (validateEmail());">
+          <input type="hidden" name="student_id" id="student_id" value="160910560">
           <h3>Email</h3>
           <input class="input input1" type="text" name="email" value="." id="myEmail">
           <br>
           <h3>Username</h3>
-          <input class="input input1" type="text" name="usernmae" value="." id="myUser">
+          <input class="input input1" type="text" name="username" value="." id="Username">
           <br>
           <div class="divpasseye">
             <div class="divpass">
               <h3>Password</h3>
             </div>
             <div class="diveye">
-              <button class="btn" onclick="myFunction()" onclick="changeeye" id="eye"><i class="fa fa-eye"></i></button>
+              <a href="#" onclick="showPassword();"><i id="eye" class="fa fa-eye"></i> Show</a>
             </div>
           </div>
-
-          <input class="input input1" type="password" value="" id="myInput">
-          <input type="checkbox" onclick="myFunction()">
+          <input class="input input1" type="password" name="password" value="" id="password">
           <br>
-
           <br>
           <div class="column">
             <input class="input input2" type="submit" disabled value="Get Started!" id="startButn">
           </div>
           <div class="column">
             <p class="p1">By clicking the “Get Started!” button, you are creating a FakeChimp account. </p>
-
           </div>
         </form>
         <footer>

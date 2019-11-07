@@ -1,46 +1,50 @@
-function myFunction() {
-  var x = document.getElementById("myInput");
-  var x = document.getElementById("eye");
-  if (x.type === "password") {
-    x.type = "text";
-    y.textcontent = "<i class="fa fa-eye-slash">"
-  } else {
-    x.type = "password";
-    y.textcontent = "<i class="fa fa-eye">"
-
+function validateEmail() {
+  var email = document.getElementById('id').value;
+  if (email == "") {
+    alert("empty email")
+    return false;
   }
 }
 
-function validateFormEmail() {
-  var x = document.getElementById("myEmail");
-  if (x === "") {
-    alert("Email must be filled out");
+function showPassword() {
+  var password = document.getElementById('password');
+
+  if (password.type === "password") {
+    password.type = "text";
+  }
+  else {
+      password.type = "password";
+}
+}
+
+function validatePassword(){
+  var password = document.getElementById('password').value;
+  if password==""{
+    alert("empty password");
     return false;
   }
-
   return true;
 }
 
-function validateFormUser() {
-  var x = document.getElementById("myUser");
-
-  if (x == "") {
-    alert("Username must be filled out");
+function validateUsername(){
+  var username = document.getElementById("username");
+  if (username =='');{
+    document.getElementById("username").focus();
+    alert("Username must not be empty")
     return false;
   }
-
-  if (x.contains("@") == True) {
-    alert("")
-    return false;
-  }
-
   return true;
 }
 
-function validateFormPassword() {
-  var x = document.getElementById("myInput");
-  if (x == "") {
-    alert("Password must be filled out");
+function validateForm(){
+  if !validateUsername(){
     return false;
   }
+  if !validatePassword(){
+    return false;
+  }
+  if !validateEmail(){
+    return false;
+  }
+  return true;
 }
