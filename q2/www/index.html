@@ -11,7 +11,8 @@
   <link href='http://fonts.googleapis.com/css?family=Proza+Libre' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script type="text/javascript" src="js/validation.js"></script>
+  <script src="js/validation.js"></script>
+
 
 </head>
 
@@ -24,13 +25,13 @@
     <div class="column">
       <h1>Get Started with your account</h1>
       <h3>Find your people. Engage your customers. Build your brand. Do it all with FakeChimp’s Marketing Platform. </h2>
-        <form action="http://cp202-server.appspot.com/register" method="post" enctype="multipart/form-data" onsubmit="return (validateEmail());">
+        <form action="http://cp202-server.appspot.com/register" method="post" enctype="multipart/form-data" onsubmit="return validateForm();">
           <input type="hidden" name="student_id" id="student_id" value="160910560">
           <h3>Email</h3>
-          <input class="input input1" type="text" name="email" value="." id="myEmail">
+          <input class="input input1" type="text" name="email" value="" id="email">
           <br>
           <h3>Username</h3>
-          <input class="input input1" type="text" name="username" value="." id="Username">
+          <input class="input input1" type="text" name="username" value="" id="username">
           <br>
           <div class="divpasseye">
             <div class="divpass">
@@ -44,7 +45,7 @@
           <br>
           <br>
           <div class="column">
-            <input class="input input2" type="submit" disabled value="Get Started!" id="startButn">
+            <input class="input input2" type="submit" value="Get Started!" id="startButn">
           </div>
           <div class="column">
             <p class="p1">By clicking the “Get Started!” button, you are creating a FakeChimp account. </p>

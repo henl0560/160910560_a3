@@ -1,29 +1,49 @@
-function validateCountry(){
-  x var = document.getElementById('country').value;
-  if country ==''{
-    alert("Empty Country");
-    document.getElementById('country').focus();
+function validateEmail() {
+  var email = document.getElementById('email').value;
+  if (email == "") {
+    alert("empty email");
     return false;
   }
+
+  if (!email.includes("@")) {
+    document.getElementById("email").focus();
+    alert("Email must have @ symbol");
+    return false;
+  }
+  if (!email.includes(".")) {
+    document.getElementById("email").focus();
+    alert("Email must have a . in it");
+    return false;
+  }
+
+  if (email.length > 128) {
+    document.getElementById("email").focus();
+    alert("Email must be less than 128 characters");
+    return false;
+  }
+
   return true;
 }
 
-function validateDescription(){
-  x var = document.getElementById('description').value;
-  if country ==''{
-    alert("Empty Description");
-    document.getElementById('description').focus();
+
+function validateField(value) {
+  var re = /^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$/;
+
+  var test = re.test(value);
+
+  if (!test) {
     return false;
   }
+
   return true;
 }
+
+
 
 function validateForm(){
-  if !validateCountry(){
+  if (!validateEmail()) {
     return false;
   }
-  if !validateDescription(){
-    return false;
-  }
+
   return true;
 }
